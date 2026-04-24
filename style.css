@@ -86,3 +86,17 @@ body {
     max-width: 600px;
     line-height: 1.6;
 }
+
+.hero-name {
+    position: absolute;
+    bottom: 40px;
+    right: 80px;
+
+    font-family: 'Playfair Display', serif;
+    font-size: 80px;
+
+    color: white;
+    opacity: 0.08;
+
+    pointer-events: none;
+}
