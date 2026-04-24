@@ -16,8 +16,8 @@ body {
     top: 0;
     padding: 30px 60px;
     display: flex;
-    justify-content: center; /* CENTRALIZA */
     align-items: center;
+    justify-content: center; /* mantém o logo central */
     z-index: 10;
 }
 
@@ -102,4 +102,18 @@ body {
 
     z-index: 2; /* 👈 ESSENCIAL */
     pointer-events: none;
+}
+
+.menu {
+    position: absolute;
+    right: 60px;
+    top: 50%;
+    transform: translateY(-50%);
+
+    font-size: 14px;
+    letter-spacing: 1px;
+}
+
+.menu:hover {
+    opacity: 1;
 }
