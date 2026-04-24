@@ -109,15 +109,6 @@ body {
 }
 
 .menu {
-    font-size: 14px;
-    letter-spacing: 1px;
-}
-
-.menu:hover {
-    opacity: 1;
-}
-
-.menu {
     display: flex;
     gap: 30px;
 }
@@ -130,23 +121,25 @@ body {
     letter-spacing: 1px;
 }
 
-/* LINHA (invisível no início) */
+/* LINHA INICIAL (escondida e deslocada) */
 .menu a::after {
     content: "";
     position: absolute;
     left: 0;
-    bottom: -5px;
+    bottom: -6px;
 
-    width: 0%;
-    height: 0.5px;
-    opacity: 0.8;
-    background: #111;
-    color: #111;
+    width: 100%;
+    height: 1px;
+    background: white;
 
-    transition: width 0.5s ease;
+    opacity: 0;
+    transform: translateX(-10px);
+
+    transition: all 0.5s ease;
 }
 
-/* HOVER */
+/* HOVER: fade + slide */
 .menu a:hover::after {
-    width: 100%;
+    opacity: 1;
+    transform: translateX(0);
 }
