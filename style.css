@@ -159,3 +159,25 @@ body {
     opacity: 1;
     transform: translateX(0);
 }
+
+/* ESTADO NORMAL (sobre imagem) */
+.nav {
+    transition: all 0.3s ease;
+}
+
+.logo,
+.menu a {
+    color: white;
+    transition: color 0.3s ease;
+}
+
+/* ESTADO AO ROLAR */
+.nav.scrolled {
+    background: rgba(255,255,255,0.8);
+    backdrop-filter: blur(15px);
+}
+
+.nav.scrolled .logo,
+.nav.scrolled .menu a {
+    color: #111;
+}
