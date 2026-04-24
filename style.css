@@ -290,3 +290,41 @@ body {
     }
 
 }
+
+/* SEÇÃO DE VÍDEO */
+.video-section {
+    position: relative;
+    width: 100%;
+    height: 70vh;
+    overflow: hidden;
+}
+
+/* VÍDEO */
+.video-section video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* SOBREPOSIÇÃO */
+.video-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+
+    background: rgba(0,0,0,0.3);
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* TEXTO */
+.video-overlay h2 {
+    color: white;
+    font-family: 'Playfair Display', serif;
+    font-size: 36px;
+    text-align: center;
+}
