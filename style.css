@@ -116,3 +116,37 @@ body {
 .menu:hover {
     opacity: 1;
 }
+
+.menu {
+    display: flex;
+    gap: 30px;
+}
+
+.menu a {
+    position: relative;
+    text-decoration: none;
+    color: white;
+    font-size: 14px;
+    letter-spacing: 1px;
+}
+
+/* LINHA (invisível no início) */
+.menu a::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -5px;
+
+    width: 0%;
+    height: 0.5px;
+    opacity: 0.8;
+    background: #111;
+    color: #111;
+
+    transition: width 0.5s ease;
+}
+
+/* HOVER */
+.menu a:hover::after {
+    width: 100%;
+}
