@@ -233,3 +233,60 @@ body {
     font-size: 14px;
     line-height: 1.4;
 }
+
+/* ===================== */
+/* RESPONSIVO MOBILE */
+/* ===================== */
+@media (max-width: 768px) {
+
+    /* NAV */
+    .nav {
+        padding: 20px;
+    }
+
+    .logo {
+        font-size: 18px;
+        letter-spacing: 3px;
+    }
+
+    .menu {
+        display: none; /* esconde menu por enquanto */
+    }
+
+    /* HERO */
+    .hero {
+        padding: 0 20px;
+        height: 80vh;
+    }
+
+    .hero h1 {
+        font-size: 32px;
+    }
+
+    .hero-name {
+        font-size: 40px;
+        right: 20px;
+        bottom: 20px;
+    }
+
+    /* PORTFÓLIO */
+    .portfolio {
+        padding: 60px 20px;
+    }
+
+    .grid {
+        grid-template-columns: 1fr; /* 1 coluna */
+        gap: 20px;
+    }
+
+    .item img {
+        height: 250px;
+    }
+
+    /* SOBRE */
+    .about {
+        padding: 60px 20px;
+        font-size: 16px;
+    }
+
+}
