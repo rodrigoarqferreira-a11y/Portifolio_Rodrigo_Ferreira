@@ -3,49 +3,86 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Seu Nome | Portfólio Arquitetônico</title>
+    <title>Seu Nome | Arquitetura</title>
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
 
     <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
-    <!-- HEADER -->
-    <header>
-        <h1>Seu Nome</h1>
-        <p>Arquitetura | Urbanismo | Projetos</p>
-    </header>
+<!-- NAVBAR -->
+<nav class="navbar">
+    <div class="logo">SEU NOME</div>
+    <ul>
+        <li><a href="#">Projetos</a></li>
+        <li><a href="#">Sobre</a></li>
+        <li><a href="#">Contato</a></li>
+    </ul>
+</nav>
 
-    <!-- HERO -->
-    <section class="hero">
-        <h2>Projetos que transformam espaços</h2>
-    </section>
+<!-- HERO (imagem forte) -->
+<section class="hero">
+    <div class="hero-content">
+        <h1>Arquitetura que conecta estética e função</h1>
+        <p>Projetos residenciais, comerciais e industriais</p>
+    </div>
+</section>
 
-    <!-- PORTFÓLIO -->
-    <section class="portfolio">
-        <h2>Projetos</h2>
+<!-- PORTFÓLIO -->
+<section class="portfolio">
 
-        <div class="grid">
+    <div class="section-header">
+        <h2>Projetos Selecionados</h2>
+    </div>
 
-            <div class="card">
-                <img src="assets/images/projeto1.jpg" alt="Projeto 1">
-                <h3>Nome do Projeto</h3>
-                <p>Residencial | 2024</p>
+    <div class="grid">
+
+        <div class="card">
+            <img src="assets/images/projeto1.jpg">
+            <div class="overlay">
+                <h3>Residência Moderna</h3>
+                <p>2024 • Residencial</p>
             </div>
-
-            <div class="card">
-                <img src="assets/images/projeto2.jpg" alt="Projeto 2">
-                <h3>Nome do Projeto</h3>
-                <p>Comercial | 2023</p>
-            </div>
-
         </div>
-    </section>
 
-    <!-- FOOTER -->
-    <footer>
-        <p>© 2026 - Seu Nome</p>
-    </footer>
+        <div class="card">
+            <img src="assets/images/projeto2.jpg">
+            <div class="overlay">
+                <h3>Galpão Industrial</h3>
+                <p>2023 • Industrial</p>
+            </div>
+        </div>
+
+        <div class="card">
+            <img src="assets/images/projeto3.jpg">
+            <div class="overlay">
+                <h3>Centro Comercial</h3>
+                <p>2022 • Comercial</p>
+            </div>
+        </div>
+
+    </div>
+
+</section>
+
+<!-- SOBRE -->
+<section class="about">
+    <div class="about-content">
+        <h2>Sobre</h2>
+        <p>
+            Atuação em projetos arquitetônicos com foco em eficiência, estética e valorização do espaço urbano.
+            Experiência em empreendimentos industriais, comerciais e residenciais.
+        </p>
+    </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+    <p>© 2026 — Seu Nome</p>
+</footer>
 
 </body>
 </html>
