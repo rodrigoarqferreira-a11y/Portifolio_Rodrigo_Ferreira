@@ -6,8 +6,7 @@
 
 body {
     font-family: 'Inter', sans-serif;
-    background: #fff;
-    color: #111;
+    color: #fff;
 }
 
 /* NAV */
@@ -19,34 +18,43 @@ body {
     display: flex;
     justify-content: space-between;
     font-size: 14px;
-    background: white;
+    z-index: 10;
 }
 
-/* HERO */
+/* HERO COM IMAGEM */
 .hero {
-    height: 90vh;
+    height: 100vh;
+    background: url('assets/images/fundo.jpg') center/cover no-repeat;
     display: flex;
     align-items: center;
     padding: 0 80px;
+    position: relative;
 }
 
+/* ESCURECER FUNDO (IMPORTANTE PRA LEGIBILIDADE) */
+.overlay {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.45);
+    top: 0;
+    left: 0;
+}
+
+/* TEXTO */
 .hero h1 {
+    position: relative;
     font-family: 'Playfair Display', serif;
     font-size: 56px;
     max-width: 700px;
     line-height: 1.2;
 }
 
-/* IMAGEM GRANDE */
-.highlight img {
-    width: 100%;
-    height: 90vh;
-    object-fit: cover;
-}
-
 /* PORTFÓLIO */
 .portfolio {
     padding: 120px 80px;
+    background: #fff;
+    color: #111;
 }
 
 .grid {
@@ -59,16 +67,13 @@ body {
     width: 100%;
     height: 400px;
     object-fit: cover;
-    transition: 0.5s;
-}
-
-.item:hover img {
-    transform: scale(1.03);
 }
 
 /* SOBRE */
 .about {
     padding: 120px 80px;
+    background: #fff;
+    color: #111;
     font-size: 20px;
     max-width: 600px;
     line-height: 1.6;
