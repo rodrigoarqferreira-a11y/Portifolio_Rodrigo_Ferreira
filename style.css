@@ -323,8 +323,7 @@ body {
 
 /* TEXTO */
 .video-overlay h2 {
-    color: white;
-    font-family: 'Playfair Display', serif;
-    font-size: 36px;
-    text-align: center;
+    font-size: 18px;
+    opacity: 0.5;
+    letter-spacing: 3px;
 }
