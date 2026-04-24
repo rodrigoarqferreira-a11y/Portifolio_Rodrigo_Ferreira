@@ -115,8 +115,8 @@ body {
 
 .menu a {
     position: relative;
-    text-decoration: none;
-    color: white;
+    text-decoration: none; /* remove sublinhado */
+    color: white;          /* força cor branca */
     font-size: 14px;
     letter-spacing: 1px;
 }
@@ -136,6 +136,22 @@ body {
     transform: translateX(-10px);
 
     transition: all 0.5s ease;
+}
+
+.menu a:visited {
+    color: white;
+}
+
+.menu a:link {
+    color: white;
+}
+
+.menu a:hover {
+    color: white;
+}
+
+.menu a:active {
+    color: white;
 }
 
 /* HOVER: fade + slide */
