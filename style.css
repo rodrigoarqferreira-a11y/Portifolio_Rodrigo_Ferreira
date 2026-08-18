@@ -87,10 +87,46 @@ body {
     color: #111;
 }
 
+/* FILTROS DE CATEGORIA */
+.filters {
+    display: flex;
+    justify-content: center;
+    gap: 16px;
+    margin-bottom: 60px;
+    flex-wrap: wrap;
+}
+
+.filter-btn {
+    background: none;
+    border: 1px solid #ccc;
+    color: #111;
+    padding: 10px 24px;
+    font-family: 'Inter', sans-serif;
+    font-size: 13px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.filter-btn:hover {
+    border-color: #111;
+}
+
+.filter-btn.active {
+    background: #111;
+    color: #fff;
+    border-color: #111;
+}
+
 .grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 40px;
+}
+
+.item.hidden {
+    display: none;
 }
 
 /* CARD DO PROJETO */
@@ -398,6 +434,16 @@ body {
     /* PORTFÓLIO */
     .portfolio {
         padding: 60px 20px;
+    }
+
+    .filters {
+        gap: 10px;
+        margin-bottom: 40px;
+    }
+
+    .filter-btn {
+        padding: 8px 16px;
+        font-size: 12px;
     }
 
     .grid {
