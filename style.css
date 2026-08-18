@@ -17,8 +17,9 @@ body {
     padding: 30px 60px;
     display: flex;
     align-items: center;
-    justify-content: space-between; 
+    justify-content: space-between;
     z-index: 10;
+    transition: all 0.3s ease;
 }
 
 .logo {
@@ -51,7 +52,7 @@ body {
     background: rgba(0,0,0,0.45);
     top: 0;
     left: 0;
-    z-index: 1; /* camada de fundo */
+    z-index: 1;
 }
 
 /* TEXTO */
@@ -62,6 +63,21 @@ body {
     max-width: 700px;
     line-height: 1.2;
     z-index: 2;
+}
+
+.hero-name {
+    position: absolute;
+    bottom: 40px;
+    right: 80px;
+
+    font-family: 'Playfair Display', serif;
+    font-size: 80px;
+
+    color: white;
+    opacity: 0.08;
+
+    z-index: 2;
+    pointer-events: none;
 }
 
 /* PORTFÓLIO */
@@ -77,111 +93,6 @@ body {
     gap: 40px;
 }
 
-.item img {
-    width: 100%;
-    height: 400px;
-    object-fit: cover;
-}
-
-/* SOBRE */
-.about {
-    padding: 120px 80px;
-    background: #fff;
-    color: #111;
-    font-size: 20px;
-    max-width: 600px;
-    line-height: 1.6;
-}
-
-.hero-name {
-    position: absolute;
-    bottom: 40px;
-    right: 80px;
-
-    font-family: 'Playfair Display', serif;
-    font-size: 80px;
-
-    color: white;
-    opacity: 0.08;
-
-    z-index: 2; /* 👈 ESSENCIAL */
-    pointer-events: none;
-}
-
-.menu {
-    display: flex;
-    gap: 30px;
-}
-
-.menu a {
-    position: relative;
-    text-decoration: none; /* remove sublinhado */
-    color: white;          /* força cor branca */
-    font-size: 14px;
-    letter-spacing: 1px;
-}
-
-/* LINHA INICIAL (escondida e deslocada) */
-.menu a::after {
-    content: "";
-    position: absolute;
-    left: 0;
-    bottom: -6px;
-
-    width: 100%;
-    height: 1px;
-    background: white;
-
-    opacity: 0;
-    transform: translateX(-10px);
-
-    transition: all 0.5s ease;
-}
-
-.menu a:visited {
-    color: white;
-}
-
-.menu a:link {
-    color: white;
-}
-
-.menu a:hover {
-    color: white;
-}
-
-.menu a:active {
-    color: white;
-}
-
-/* HOVER: fade + slide */
-.menu a:hover::after {
-    opacity: 1;
-    transform: translateX(0);
-}
-
-/* ESTADO NORMAL (sobre imagem) */
-.nav {
-    transition: all 0.3s ease;
-}
-
-.logo,
-.menu a {
-    color: white;
-    transition: color 0.3s ease;
-}
-
-/* ESTADO AO ROLAR */
-.nav.scrolled {
-    background: rgba(255,255,255,0.8);
-    backdrop-filter: blur(15px);
-}
-
-.nav.scrolled .logo,
-.nav.scrolled .menu a {
-    color: #111;
-}
-
 /* CARD DO PROJETO */
 .item {
     position: relative;
@@ -189,7 +100,6 @@ body {
     cursor: pointer;
 }
 
-/* IMAGEM */
 .item img {
     width: 100%;
     height: 400px;
@@ -197,12 +107,10 @@ body {
     transition: transform 0.6s ease;
 }
 
-/* HOVER ZOOM */
 .item:hover img {
     transform: scale(1.05);
 }
 
-/* INFORMAÇÕES DO PROJETO */
 .project-info {
     position: absolute;
     bottom: 0;
@@ -217,12 +125,10 @@ body {
     transition: opacity 0.4s ease;
 }
 
-/* APARECE NO HOVER */
 .item:hover .project-info {
     opacity: 1;
 }
 
-/* TEXTO */
 .project-info h3 {
     font-family: 'Playfair Display', serif;
     font-size: 20px;
@@ -232,6 +138,200 @@ body {
 .project-info p {
     font-size: 14px;
     line-height: 1.4;
+}
+
+/* SOBRE */
+.about {
+    padding: 120px 80px;
+    background: #fff;
+    color: #111;
+    font-size: 20px;
+    max-width: 600px;
+    line-height: 1.6;
+}
+
+/* MENU */
+.menu {
+    display: flex;
+    gap: 30px;
+}
+
+.menu a {
+    position: relative;
+    text-decoration: none;
+    color: white;
+    font-size: 14px;
+    letter-spacing: 1px;
+}
+
+.menu a::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -6px;
+
+    width: 100%;
+    height: 1px;
+    background: currentColor;
+
+    opacity: 0;
+    transform: translateX(-10px);
+
+    transition: all 0.5s ease;
+}
+
+.menu a:visited,
+.menu a:link,
+.menu a:hover,
+.menu a:active {
+    color: inherit;
+}
+
+.menu a:hover::after {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+.logo,
+.menu a {
+    color: white;
+    transition: color 0.3s ease;
+}
+
+/* ESTADO AO ROLAR */
+.nav.scrolled {
+    background: rgba(255,255,255,0.85);
+    backdrop-filter: blur(15px);
+}
+
+.nav.scrolled .logo,
+.nav.scrolled .menu a {
+    color: #111;
+}
+
+/* BOTÃO HAMBÚRGUER (só aparece no mobile) */
+.menu-toggle {
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    gap: 5px;
+    width: 32px;
+    height: 32px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    z-index: 20;
+}
+
+.menu-toggle span {
+    display: block;
+    width: 100%;
+    height: 2px;
+    background: white;
+    transition: all 0.3s ease;
+}
+
+.nav.scrolled .menu-toggle span {
+    background: #111;
+}
+
+.menu-toggle.open span:nth-child(1) {
+    transform: translateY(7px) rotate(45deg);
+}
+
+.menu-toggle.open span:nth-child(2) {
+    opacity: 0;
+}
+
+.menu-toggle.open span:nth-child(3) {
+    transform: translateY(-7px) rotate(-45deg);
+}
+
+/* SEÇÃO DE VÍDEO */
+.video-section {
+    position: relative;
+    width: 100%;
+    height: 70vh;
+    overflow: hidden;
+}
+
+.video-section video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.video-overlay {
+    position: absolute;
+    bottom: 30px;
+    left: 40px;
+    background: none;
+}
+
+.video-overlay h2 {
+    font-size: 15px;
+    opacity: 0.4;
+    letter-spacing: 2px;
+    color: white;
+}
+
+/* CONTATO */
+.contato {
+    padding: 120px 80px;
+    background: #111;
+    color: #fff;
+    text-align: center;
+}
+
+.contato h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 36px;
+    margin-bottom: 16px;
+}
+
+.contato p {
+    font-size: 16px;
+    opacity: 0.75;
+    margin-bottom: 40px;
+}
+
+.contato-links {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    flex-wrap: wrap;
+}
+
+.contato-links a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 14px;
+    letter-spacing: 1px;
+    border-bottom: 1px solid rgba(255,255,255,0.4);
+    padding-bottom: 4px;
+    transition: opacity 0.3s ease;
+}
+
+.contato-links a:hover {
+    opacity: 0.6;
+}
+
+/* FOOTER */
+.footer {
+    background: #111;
+    color: rgba(255,255,255,0.5);
+    text-align: center;
+    padding: 24px;
+    font-size: 12px;
+}
+
+/* ===================== */
+/* RESPONSIVO TABLET */
+/* ===================== */
+@media (max-width: 1024px) {
+    .grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
 }
 
 /* ===================== */
@@ -249,8 +349,34 @@ body {
         letter-spacing: 3px;
     }
 
+    .menu-toggle {
+        display: flex;
+        margin-left: auto;
+    }
+
     .menu {
-        display: none; /* esconde menu por enquanto */
+        display: none;
+        position: fixed;
+        top: 0;
+        right: 0;
+        height: 100vh;
+        width: 70%;
+        max-width: 300px;
+        background: #111;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: center;
+        gap: 30px;
+        padding: 40px;
+    }
+
+    .menu.open {
+        display: flex;
+    }
+
+    .menu a {
+        color: #fff;
+        font-size: 18px;
     }
 
     /* HERO */
@@ -275,7 +401,7 @@ body {
     }
 
     .grid {
-        grid-template-columns: 1fr; /* 1 coluna */
+        grid-template-columns: 1fr;
         gap: 20px;
     }
 
@@ -289,36 +415,13 @@ body {
         font-size: 16px;
     }
 
-}
+    /* CONTATO */
+    .contato {
+        padding: 60px 20px;
+    }
 
-/* SEÇÃO DE VÍDEO */
-.video-section {
-    position: relative;
-    width: 100%;
-    height: 70vh;
-    overflow: hidden;
-}
-
-/* VÍDEO */
-.video-section video {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-}
-
-/* SOBREPOSIÇÃO */
-.video-overlay {
-    position: absolute;
-    bottom: 30px;   /* 👈 desce o texto */
-    left: 40px;     /* 👈 joga pra esquerda */
-
-    background: none; /* remove fundo escuro pesado */
-}
-
-/* TEXTO */
-.video-overlay h2 {
-    font-size: 15px;
-    opacity: 0.4;
-    letter-spacing: 2px;
-    color: white;
+    .contato-links {
+        flex-direction: column;
+        gap: 20px;
+    }
 }
