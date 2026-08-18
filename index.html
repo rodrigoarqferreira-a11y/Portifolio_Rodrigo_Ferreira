@@ -5,6 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <title>Rodrigo Ferreira | Arquitetura</title>
+<meta name="description" content="Portfólio de projetos arquitetônicos de Rodrigo Ferreira: residencial, comercial e institucional, com foco em desempenho, viabilidade e valorização imobiliária.">
 
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&family=Inter:wght@300;400&display=swap" rel="stylesheet">
 
@@ -16,11 +17,18 @@
 <!-- NAV -->
 <header class="nav">
     <div class="logo">Rodrigo Ferreira</div>
+
+    <button class="menu-toggle" aria-label="Abrir menu" aria-expanded="false">
+        <span></span>
+        <span></span>
+        <span></span>
+    </button>
+
     <div class="menu">
-    <a href="#">Projetos</a>
-    <a href="#">Sobre</a>
-    <a href="#">Contato</a>
-</div>
+        <a href="#portfolio">Projetos</a>
+        <a href="#about">Sobre</a>
+        <a href="#contato">Contato</a>
+    </div>
 </header>
 
 <!-- HERO COM FUNDO -->
@@ -31,16 +39,18 @@
         Arquitetura que traduz estratégia,<br>
         espaço e valor.
     </h1>
-    </section>
+
+    <span class="hero-name">Rodrigo Ferreira</span>
+</section>
 
 <!-- PORTFÓLIO -->
-<section class="portfolio">
+<section class="portfolio" id="portfolio">
 
     <div class="grid">
 
     <!-- PROJETO 1 -->
     <div class="item">
-        <img src="assets/images/projeto_psicologia.jpg" alt="Consultório de Psicologia">
+        <img src="assets/images/projeto_psicologia.jpg" alt="Consultório de Psicologia" loading="lazy">
 
         <div class="project-info">
             <h3>Consultório de Psicologia</h3>
@@ -53,7 +63,7 @@
 
     <!-- PROJETO 2 -->
     <div class="item">
-        <img src="assets/images/projeto_lucas_sala.jpg" alt="Apartamento Residencial">
+        <img src="assets/images/projeto_lucas_sala.jpg" alt="Apartamento Residencial" loading="lazy">
 
         <div class="project-info">
             <h3>Apartamento Residencial</h3>
@@ -66,7 +76,7 @@
 
     <!-- PROJETO 3 -->
     <div class="item">
-        <img src="assets/images/templo.jpg" alt="Templo Religioso">
+        <img src="assets/images/templo.jpg" alt="Templo Religioso" loading="lazy">
 
         <div class="project-info">
             <h3>Igreja Templo do Deus Vivo</h3>
@@ -78,7 +88,7 @@
         </div>
     </div>
 
-</div>
+    </div>
 
 </section>
 
@@ -90,17 +100,35 @@
         Seu navegador não suporta vídeo.
     </video>
 
-   </div>
+    <div class="video-overlay">
+        <h2>PROJETO EM DESTAQUE</h2>
+    </div>
 
 </section>
 
 <!-- SOBRE -->
-<section class="about">
+<section class="about" id="about">
     <p>
         Desenvolvimento de projetos arquitetônicos com foco em desempenho,
         viabilidade e valorização imobiliária.
     </p>
 </section>
+
+<!-- CONTATO -->
+<section class="contato" id="contato">
+    <h2>Vamos conversar sobre seu projeto?</h2>
+    <p>Entre em contato para orçamentos, dúvidas ou parcerias.</p>
+
+    <div class="contato-links">
+        <a href="mailto:seuemail@exemplo.com">rodrigoarq.ferreira@outlook.com</a>
+        <a href="https://wa.me/55SEUNUMEROAQUI" target="_blank" rel="noopener">WhatsApp- (31) 99246-8244</a>
+        <a href="https://instagram.com/seuinstagram" target="_blank" rel="noopener">Instagram - https://www.instagram.com/rdgoarquiteto?igsh=bmphaG1iZGh3NHo5&utm_source=qr</a>
+    </div>
+</section>
+
+<footer class="footer">
+    <p>&copy; 2026 Rodrigo Ferreira Arquitetura. Todos os direitos reservados.</p>
+</footer>
 
 <script src="script.js"></script>
 
