@@ -57,8 +57,8 @@
     <div class="grid">
 
     <!-- PROJETO 1 -->
-    <div class="item" data-category="comercial">
-        <img src="assets/images/projeto_psicologia.jpg" alt="Consultório de Psicologia" loading="lazy">
+    <div class="item" data-category="comercial" data-title="Consultório de Psicologia" data-images="assets/images/psicologia-1.jpg, assets/images/psicologia-2.jpg, assets/images/psicologia-3.jpg">
+        <img src="assets/images/psicologia-1.jpg" alt="Consultório de Psicologia" loading="lazy">
 
         <div class="project-info">
             <h3>Consultório de Psicologia</h3>
@@ -70,8 +70,8 @@
     </div>
 
     <!-- PROJETO 2 -->
-    <div class="item" data-category="residencial">
-        <img src="assets/images/projeto_lucas_sala.jpg" alt="Apartamento Residencial" loading="lazy">
+    <div class="item" data-category="residencial" data-title="Apartamento Residencial" data-images="assets/images/residencial-1.jpg, assets/images/residencial-2.jpg, assets/images/residencial-3.jpg">
+        <img src="assets/images/residencial-1.jpg" alt="Apartamento Residencial" loading="lazy">
 
         <div class="project-info">
             <h3>Apartamento Residencial</h3>
@@ -83,8 +83,8 @@
     </div>
 
     <!-- PROJETO 3 -->
-    <div class="item" data-category="religioso">
-        <img src="assets/images/templo.jpg" alt="Templo Religioso" loading="lazy">
+    <div class="item" data-category="religioso" data-title="Igreja Templo do Deus Vivo" data-images="assets/images/religioso-1.jpg, assets/images/religioso-2.jpg, assets/images/religioso-3.jpg">
+        <img src="assets/images/religioso-1.jpg" alt="Templo Religioso" loading="lazy">
 
         <div class="project-info">
             <h3>Igreja Templo do Deus Vivo</h3>
@@ -99,6 +99,20 @@
     </div>
 
 </section>
+
+<!-- LIGHTBOX / GALERIA DO PROJETO -->
+<div class="lightbox" id="lightbox">
+    <button class="lightbox-close" aria-label="Fechar">&times;</button>
+    <button class="lightbox-prev" aria-label="Foto anterior">&#8249;</button>
+
+    <div class="lightbox-content">
+        <img src="" alt="" id="lightbox-img">
+        <h3 id="lightbox-title"></h3>
+        <span class="lightbox-counter" id="lightbox-counter"></span>
+    </div>
+
+    <button class="lightbox-next" aria-label="Próxima foto">&#8250;</button>
+</div>
 
 <!-- VÍDEO DE DESTAQUE -->
 <section class="video-section">
